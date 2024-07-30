@@ -1,0 +1,48 @@
+.banner{
+    height:100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.product{
+    height: 400px;
+    width: 400px;
+    z-index: 50;
+    bottom: 170px;
+    left: 55%;
+    position: absolute;
+    transform: translateX(-50%);
+    transition: 0.7s;
+}
+
+.soda-can-1{
+    background: 
+            url(label-1.png) 0 0,
+            url(mockup.png);
+    background-size:auto 100%;
+    width: 280px;
+    aspect-ratio: 2/4;
+    background-blend-mode: multiply;
+    mask-image: url(mockup.png);
+    mask-size: auto 100%;
+    transition:0.7s;
+    position: absolute;
+}
+
+.soda-can-1:hover{
+    background: 
+            url(label-2.png) -1150px 0,
+            url(mockup.png);
+    background-size:auto 100%;
+    width: 280px;
+    aspect-ratio: 2/4;
+    background-blend-mode: multiply;
+    mask-image: url(mockup.png);
+    mask-size: auto 100%;
+}
+
+
+
+.product:hover{
+    bottom: 250px;
+}
