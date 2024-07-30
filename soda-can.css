@@ -1,15 +1,22 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+
 .banner{
     height:100vh;
     overflow: hidden;
+    display: flex;
     position: relative;
+    background: url(bg.jpg);
 }
 
 .product{
     height: 400px;
-    width: 400px;
+    width: 180px;
     z-index: 50;
-    bottom: 170px;
-    left: 55%;
+    bottom: 250px;
+    left: 50%;
     position: absolute;
     transform: translateX(-50%);
     transition: 0.7s;
@@ -20,7 +27,7 @@
             url(label-1.png) 0 0,
             url(mockup.png);
     background-size:auto 100%;
-    width: 280px;
+    width: 250px;
     aspect-ratio: 2/4;
     background-blend-mode: multiply;
     mask-image: url(mockup.png);
@@ -34,15 +41,38 @@
             url(label-2.png) -1150px 0,
             url(mockup.png);
     background-size:auto 100%;
-    width: 280px;
+    width: 250px;
     aspect-ratio: 2/4;
     background-blend-mode: multiply;
     mask-image: url(mockup.png);
     mask-size: auto 100%;
 }
 
-
-
 .product:hover{
-    bottom: 250px;
+    bottom: 280px;
+}
+
+.rock2{
+    height: 400px;
+    bottom: 0px;
+    left: 0;
+    position: absolute;
+}
+
+.rock1{
+    height: 150px;
+    position: absolute;
+    bottom: 30px;
+    left: 38%;
+}
+
+.banner:has(.soda-can-1:hover) .rock2{
+    bottom: -50px;
+    left: -50px;
+    transition: 0.7s ;
+}
+
+.banner:has(.soda-can-1:hover) .rock1{
+    bottom: 0;
+    transition: 0.7s;
 }
